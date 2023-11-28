@@ -48,6 +48,18 @@ public class App extends javax.swing.JFrame {
         initComponents();
         this.setLayout(null);
         //jPanel1.setVisible(false);
+        ocultarPaneles();
+        pnlLogin.setVisible(true);
+        pnlLogin.setBounds(250,250,570,322);
+        deshabilitarBotonera();        
+        this.setBounds(260, 100, 1160,850);
+        mostrarFechaHora();
+    }
+    
+    private void ocultarPaneles()
+    {
+        pnlUsuario.setVisible(false);
+        pnlUsuario.setBounds(20, 150, 1115, 640);
         pnlEntrada.setVisible(false);
         pnlEntrada.setBounds(20, 150, 1115, 640);
         pnlClientes.setVisible(false);
@@ -58,11 +70,6 @@ public class App extends javax.swing.JFrame {
         pnlReportes.setBounds(20, 150, 1115, 640);
         pnlDeudores.setBounds(20, 150, 1115, 640);
         pnlDeudores.setVisible(false);
-        pnlLogin.setVisible(true);
-        pnlLogin.setBounds(250,250,570,322);
-        deshabilitarBotonera();        
-        this.setBounds(260, 100, 1160,850);
-        mostrarFechaHora();
     }
     
     private void mostrarFechaHora()
@@ -230,11 +237,42 @@ public class App extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         btnCerrarDeudores1 = new javax.swing.JButton();
+        pnlUsuario = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        txtRut = new javax.swing.JTextField();
+        txtApellidoPaterno = new javax.swing.JTextField();
+        txtApellidoMaterno = new javax.swing.JTextField();
+        txtNombreUsuario = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        btnModificar = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        cboPrivilegios = new javax.swing.JComboBox<>();
+        pwdClave2 = new javax.swing.JPasswordField();
+        pwdClave1 = new javax.swing.JPasswordField();
+        jLabel31 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        btnCerrarEntrada1 = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        txtApellidoPaterno1 = new javax.swing.JTextField();
+        txtApellidoMaterno1 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuConfiguracion = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         mnuSistema = new javax.swing.JMenu();
+        mniUsuarioDeSistema = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
 
@@ -620,12 +658,12 @@ public class App extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(22, 75, 96));
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField1.setBorder(null);
-        pnlLogin.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 157, 33));
+        pnlLogin.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 157, 20));
 
         jPasswordField1.setBackground(new java.awt.Color(22, 75, 96));
         jPasswordField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jPasswordField1.setBorder(null);
-        pnlLogin.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 157, 34));
+        pnlLogin.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 157, 20));
 
         btnAcceder.setText("ACCEDER");
         btnAcceder.addActionListener(new java.awt.event.ActionListener() {
@@ -643,11 +681,11 @@ public class App extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        pnlLogin.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 160, 10));
+        pnlLogin.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 160, 20));
 
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        pnlLogin.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 160, 10));
+        pnlLogin.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 160, 20));
 
         jToolBar1.setBorder(null);
         jToolBar1.setRollover(true);
@@ -1278,6 +1316,138 @@ public class App extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        pnlUsuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Nombre");
+        pnlUsuario.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("RUT o DNI");
+        pnlUsuario.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Nombre de Usuario");
+        pnlUsuario.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Apellidos");
+        pnlUsuario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Repita la Clave");
+        pnlUsuario.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Clave");
+        pnlUsuario.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 300, -1, -1));
+
+        txtRut.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtRut.setToolTipText("Ingresar sin  puntos y  con guión (ejemplo:11222333-k)");
+        txtRut.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRutKeyTyped(evt);
+            }
+        });
+        pnlUsuario.add(txtRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 170, -1));
+
+        txtApellidoPaterno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pnlUsuario.add(txtApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 170, -1));
+
+        txtApellidoMaterno.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pnlUsuario.add(txtApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 170, -1));
+
+        txtNombreUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtNombreUsuario.setToolTipText("Puede ser el RUT o el nombre abreviado con el apellido");
+        pnlUsuario.add(txtNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 170, -1));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel18.setText("Datos de Usuario del Sistema");
+        pnlUsuario.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, -1, -1));
+
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/[004389].png"))); // NOI18N
+        btnModificar.setToolTipText("Guardar moficicaciones de datos ");
+        pnlUsuario.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 50, 40));
+
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/[004434].png"))); // NOI18N
+        btnGuardar.setToolTipText("Guarda el usuario que tendrá acceso al sistema Parkimetro");
+        pnlUsuario.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 50, 40));
+
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
+        btnBuscar.setToolTipText("Buscar por RUT");
+        pnlUsuario.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 50, 40));
+
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/[004357].png"))); // NOI18N
+        btnBorrar.setToolTipText("Borrar un usuario");
+        pnlUsuario.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 50, 40));
+
+        jLabel19.setText("* Aquí puede ingresar todas las personas autorizadas para manejar el sistema. Puede otorgar");
+        pnlUsuario.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, -1));
+
+        jLabel21.setText("privilegios de administrador total o de usuario común. Se recomienda crear un solo ");
+        pnlUsuario.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, 500, -1));
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Privilegios");
+        pnlUsuario.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, -1));
+
+        cboPrivilegios.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cboPrivilegios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- seleccione -", "Usuario normal", "Administrador Total" }));
+        pnlUsuario.add(cboPrivilegios, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 170, 30));
+
+        pwdClave2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pnlUsuario.add(pwdClave2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 170, -1));
+
+        pwdClave1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        pnlUsuario.add(pwdClave1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 170, -1));
+
+        jLabel31.setText("administrador, (por ejemplo el dueño del negocio o el jefe a cargo)");
+        pnlUsuario.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, -1, -1));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/avanza.png"))); // NOI18N
+        jButton1.setToolTipText("Siguiente Usuario");
+        pnlUsuario.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 40, 30));
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/retrocede.png"))); // NOI18N
+        jButton4.setToolTipText("Usuario Anterior");
+        pnlUsuario.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, 40, -1));
+
+        btnCerrarEntrada1.setBackground(new java.awt.Color(204, 204, 204));
+        btnCerrarEntrada1.setForeground(new java.awt.Color(255, 255, 255));
+        btnCerrarEntrada1.setText("X");
+        btnCerrarEntrada1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarEntrada1ActionPerformed(evt);
+            }
+        });
+        pnlUsuario.add(btnCerrarEntrada1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 0, -1, -1));
+
+        jLabel43.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setText("Email");
+        pnlUsuario.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setText("Teléfono");
+        pnlUsuario.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
+
+        txtApellidoPaterno1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtApellidoPaterno1.setText("+569");
+        txtApellidoPaterno1.setToolTipText("El teléfono celular");
+        pnlUsuario.add(txtApellidoPaterno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 170, -1));
+
+        txtApellidoMaterno1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtApellidoMaterno1.setToolTipText("Una dirección de correo");
+        pnlUsuario.add(txtApellidoMaterno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 170, -1));
+
         mnuConfiguracion.setText("Configuración");
         mnuConfiguracion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
 
@@ -1293,6 +1463,14 @@ public class App extends javax.swing.JFrame {
 
         mnuSistema.setText("Sistema");
         mnuSistema.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
+        mniUsuarioDeSistema.setText("Usuario de Sistema");
+        mniUsuarioDeSistema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniUsuarioDeSistemaActionPerformed(evt);
+            }
+        });
+        mnuSistema.add(mniUsuarioDeSistema);
 
         jMenuItem2.setText("Ayuda");
         mnuSistema.add(jMenuItem2);
@@ -1329,9 +1507,10 @@ public class App extends javax.swing.JFrame {
                                         .addComponent(pnlDeudores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(pnlEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(pnlLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pnlClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 920, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(pnlClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 920, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnlUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1357,7 +1536,9 @@ public class App extends javax.swing.JFrame {
                         .addComponent(pnlDeudores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(pnlClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(pnlClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(pnlUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlReportes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(36, Short.MAX_VALUE))
@@ -1377,6 +1558,8 @@ public class App extends javax.swing.JFrame {
         pnlReportes.setVisible(false);
         pnlClientes.setVisible(false);
         pnlDeudores.setVisible(false);
+        pnlUsuario.setVisible(false);
+        pnlUsuario.setVisible(false);
         Fechas f = new Fechas();
         lblFechaSalida.setText(f.fechaActual());
         //txtPatenteSalida.setText("");
@@ -1408,6 +1591,8 @@ public class App extends javax.swing.JFrame {
         pnlReportes.setVisible(false);
         pnlClientes.setVisible(true);
         pnlDeudores.setVisible(false);
+        pnlUsuario.setVisible(false);
+        pnlUsuario.setVisible(false);
     }//GEN-LAST:event_btnClientesActionPerformed
 
     private void btnDeudoresMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeudoresMouseEntered
@@ -1491,6 +1676,7 @@ public class App extends javax.swing.JFrame {
             pnlReportes.setVisible(false);
             pnlClientes.setVisible(false);
             pnlDeudores.setVisible(false);
+            pnlUsuario.setVisible(false);
             Fechas f = new Fechas();
             lblFechaEntrada.setText(f.fechaActual());
             txtPatenteEntrada.setText("");
@@ -1520,6 +1706,7 @@ public class App extends javax.swing.JFrame {
 
     private void btnLavadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLavadoActionPerformed
         // TODO add your handling code here:
+        pnlUsuario.setVisible(false);
     }//GEN-LAST:event_btnLavadoActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -1728,6 +1915,38 @@ public class App extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    private void mniUsuarioDeSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniUsuarioDeSistemaActionPerformed
+            pnlUsuario.setVisible(true);
+            pnlEntrada.setVisible(false);
+            pnlSalida.setVisible(false);
+            pnlReportes.setVisible(false);
+            pnlClientes.setVisible(false);
+            pnlDeudores.setVisible(false);
+    }//GEN-LAST:event_mniUsuarioDeSistemaActionPerformed
+
+    private void btnCerrarEntrada1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarEntrada1ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+        
+    }//GEN-LAST:event_btnCerrarEntrada1ActionPerformed
+
+    private void txtRutKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRutKeyTyped
+        // Solo se permite - y sin puntos letra con mayúsculas
+        char caracter= evt.getKeyChar();
+         if ( evt.getKeyChar()=='_' || evt.getKeyChar()=='*' ||
+                   evt.getKeyChar()==' ' || evt.getKeyChar()=='+' || evt.getKeyChar()=='/' ||
+                   evt.getKeyChar()==',' || evt.getKeyChar()=='.' || evt.getKeyChar()==':' ||
+                 evt.getKeyChar()=='{' || evt.getKeyChar()=='}' || evt.getKeyChar()=='´'){
+               evt.consume();
+           }
+         if(Character.isLowerCase(caracter))
+            {
+                String strCadena= ("" + caracter).toUpperCase();
+                caracter= strCadena.charAt(0);
+                evt.setKeyChar(caracter);
+            }
+    }//GEN-LAST:event_txtRutKeyTyped
+
     private void limpiarEntrada()
     {
         txtPatenteEntrada.setText("");
@@ -1770,6 +1989,8 @@ public class App extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAcceder;
     private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnBorrar;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnBuscarPatente;
     private javax.swing.JButton btnCancelarEntrada;
     private javax.swing.JButton btnCerrar;
@@ -1777,19 +1998,24 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JButton btnCerrarDeudores;
     private javax.swing.JButton btnCerrarDeudores1;
     private javax.swing.JButton btnCerrarEntrada;
+    private javax.swing.JButton btnCerrarEntrada1;
     private javax.swing.JButton btnCerrarSalida;
     private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnComprobante;
     private javax.swing.JButton btnDeudores;
     private javax.swing.JButton btnEntrada2;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnGuardarEntrada;
     private javax.swing.JButton btnLavado;
     private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnPagoEfectivo;
     private javax.swing.JButton btnReportes;
     private javax.swing.JButton btnSalida;
     private javax.swing.JButton btnSalir;
+    private javax.swing.JComboBox<String> cboPrivilegios;
     private javax.swing.JComboBox<String> cboTipoVehiculo;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1798,11 +2024,14 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1810,7 +2039,12 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -1820,6 +2054,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -1828,13 +2063,18 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -1876,6 +2116,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel lblIngreseDinero;
     private javax.swing.JLabel lblVuelto;
     private javax.swing.JLabel lblVueltoEs;
+    private javax.swing.JMenuItem mniUsuarioDeSistema;
     private javax.swing.JMenu mnuConfiguracion;
     private javax.swing.JMenu mnuSistema;
     private javax.swing.JPanel pnlClientes;
@@ -1886,10 +2127,19 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel pnlLogin;
     private javax.swing.JPanel pnlReportes;
     private javax.swing.JPanel pnlSalida;
+    private javax.swing.JPanel pnlUsuario;
+    private javax.swing.JPasswordField pwdClave1;
+    private javax.swing.JPasswordField pwdClave2;
     private javax.swing.JTextArea txaDetalle;
+    private javax.swing.JTextField txtApellidoMaterno;
+    private javax.swing.JTextField txtApellidoMaterno1;
+    private javax.swing.JTextField txtApellidoPaterno;
+    private javax.swing.JTextField txtApellidoPaterno1;
     private javax.swing.JTextField txtDinero;
+    private javax.swing.JTextField txtNombreUsuario;
     private javax.swing.JTextField txtPatenteDeudas;
     private javax.swing.JTextField txtPatenteEntrada;
     private javax.swing.JTextField txtPatenteSalida;
+    private javax.swing.JTextField txtRut;
     // End of variables declaration//GEN-END:variables
 }
